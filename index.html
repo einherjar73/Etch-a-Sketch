@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="#">
-  <title>Etch a Sketch</title>
-</head>
-<body>
-  <h1>Etch a Sketch</h1>
-  <h2 class="heading-2">16 x 16</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="#" />
+    <title>Etch a Sketch</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Etch A Sketch</h1>
+    </div>
+    <h2 class="heading-2">16 x 16</h2>
+    <div class="buttons">
+      <button id="square-number" class="btn">Change Size</button>
+      <button id="dark" class="btn">Darker</button>
+      <button id="light" class="btn">Lighter</button>
+    </div>
 
-  <button id="square-number" class="btn">Change Size</button>
-  <button id="dark" class="btn">Dark</button>
-  <button id="light" class="btn">Light</button>
-
-  <div id="container"></div>
-  <script src="javascript.js"></script>
-</body>
+    <div id="container"></div>
+    <script src="javascript.js"></script>
+  </body>
 </html>
