@@ -52,13 +52,13 @@ contDiv.addEventListener("click", () => {
   if (!isClicked) {
     divs = contDiv.querySelectorAll("div");
     divs.forEach((div) => {
-      div.addEventListener("mousemove", coloring);
+      div.addEventListener("mouseover", coloring);
     });
     isClicked = true;
   } else if (isClicked) {
     divs = contDiv.querySelectorAll("div");
     divs.forEach((div) => {
-      div.removeEventListener("mousemove", coloring);
+      div.removeEventListener("mouseover", coloring);
     });
     isClicked = false;
   }
