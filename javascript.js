@@ -1,11 +1,13 @@
 const contDiv = document.querySelector("#container");
 const squareNum = document.querySelector("#square-number");
 const heading2 = document.querySelector(".heading-2");
-const darkButton = document.querySelector("#dark");
-const lightButton = document.querySelector("#light");
+const randomCol = document.querySelector("#random-color");
+const blackCol = document.querySelector("#black-color");
+const reset = document.querySelector("#reset");
 let squares = 256;
 let isClicked = false;
 let divs;
+let changeColor = false;
 
 function getSquares(n) {
   return n * n;
@@ -37,12 +39,14 @@ function createSquares(squares, square) {
     const div = document.createElement("div");
     div.style.height = `${500 / square}px`;
     div.style.width = `${500 / square}px`;
-    div.style.border = "1px solid black";
+    // div.style.border = "1px solid black";
     div.style.boxSizing = "border-box";
     contDiv.appendChild(div);
+    reset.addEventListener("click", () => {
+      div.style.backgroundColor = "";
+    });
   }
 }
-
 
 contDiv.addEventListener("click", () => {
   if (!isClicked){
@@ -61,8 +65,19 @@ contDiv.addEventListener("click", () => {
 });
 
 function coloring(e) {
-  e.target.style.backgroundColor = getRandomColor();
-  // e.target.style.backgroundColor = "black";
+  if (!changeColor) {
+    e.target.style.backgroundColor = getRandomColor();
+  } else {
+    e.target.style.backgroundColor = "black";
+  }
 }
+
+blackCol.addEventListener("click", () => {
+  changeColor = true;
+});
+
+randomCol.addEventListener("click", () => {
+  changeColor = false;
+})
 
 createSquares(squares, 16);
