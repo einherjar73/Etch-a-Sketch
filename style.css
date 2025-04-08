@@ -43,20 +43,20 @@ h2 {
   font-weight: 600;
 }
 
-.btn:hover {  
+.btn:hover {
   transform: scale(1.1);
 }
 
-.btn:active{
-  box-shadow: 0px 0px 5px black;  
+.btn:active {
+  box-shadow: 0px 0px 5px black;
 }
 
-#reset{
+#reset {
   margin-left: 50px;
 }
 
-#random-color{
-  margin: 0px 5px 0px 50px
+#random-color {
+  margin: 0px 5px 0px 50px;
 }
 
 #container {

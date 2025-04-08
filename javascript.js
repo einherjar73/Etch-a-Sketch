@@ -39,7 +39,7 @@ function createSquares(squares, square) {
     const div = document.createElement("div");
     div.style.height = `${500 / square}px`;
     div.style.width = `${500 / square}px`;
-    // div.style.border = "1px solid black";
+    div.style.border = "1px solid black";
     div.style.boxSizing = "border-box";
     contDiv.appendChild(div);
     reset.addEventListener("click", () => {
@@ -49,18 +49,18 @@ function createSquares(squares, square) {
 }
 
 contDiv.addEventListener("click", () => {
-  if (!isClicked){
+  if (!isClicked) {
     divs = contDiv.querySelectorAll("div");
     divs.forEach((div) => {
       div.addEventListener("mousemove", coloring);
     });
     isClicked = true;
-  } else if (isClicked){
+  } else if (isClicked) {
     divs = contDiv.querySelectorAll("div");
     divs.forEach((div) => {
-    div.removeEventListener("mousemove", coloring);
-  });
-  isClicked = false;
+      div.removeEventListener("mousemove", coloring);
+    });
+    isClicked = false;
   }
 });
 
@@ -78,6 +78,6 @@ blackCol.addEventListener("click", () => {
 
 randomCol.addEventListener("click", () => {
   changeColor = false;
-})
+});
 
 createSquares(squares, 16);
