@@ -3,6 +3,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .header {
@@ -27,9 +28,9 @@ h2 {
 
 .buttons {
   display: flex;
-  justify-content: center;
-  /* gap: 50px; */
+  justify-content: center;  
   width: 500px;
+  margin-left: 30px;
 }
 
 .btn {
@@ -59,6 +60,26 @@ h2 {
   margin: 0px 5px 0px 50px;
 }
 
+.erase-img{
+  width: 30px;
+}
+
+#erase{
+  margin: 50px 5px 0px 0px;
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  padding: 0px;
+  border: 3px solid black;  
+  /* box-sizing: border-box; */
+}
+
+.erase-container{
+  display: flex;
+  width: 550px;
+  height: 500px;  
+}
+
 #container {
   display: flex;
   flex-wrap: wrap;
@@ -67,6 +88,7 @@ h2 {
   width: 500px;
   height: 500px;
   border: 1px solid black;
+  /* box-sizing: border-box; */
   overflow: hidden;
   flex-shrink: 0;
   margin-top: 2px;
